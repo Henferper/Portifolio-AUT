@@ -1,0 +1,21 @@
+ARDUINO.C 
+OBJETIVO: Ligar Led com Botão
+
+int buttonPin = 2;
+int ledPin = 3;
+int estadoButton = 0;
+
+void setup(){
+  pinMode(ledPin , OUTPUT);
+  pinMode(buttonPin , INPUT);
+}
+
+void loop(){
+  estadoButton = digitalRead(buttonPin);
+  if (estadoButton == HIGH) {
+    digitalWrite(ledPin , HIGH);
+  }
+  else { 
+    digitalWrite(ledPin, LOW);
+  }
+}

@@ -1,0 +1,71 @@
+ATIVIDADE 3
+TÍTULO: SEMÁFORO COM BOTÃO TESTE
+OBJETIVO: Modo Configuração Semáforo - Piscar 3x led Amarelo por 1s
+	  Modo Padrão: Ligar vermelho 5s (Desligar depois)
+	               Ligar verde 5s (Desligar depois)
+                       ligar amarelo 3s (Desligar depois)
+
+                       Mais botão de reset dos Leds para teste
+
+
+Programação
+
+int led_vermelho = 2;
+int led_amarelo = 3;
+int led_verde = 4;
+int botao = 5;
+
+int tempo_setup = 1000;
+int tempo_verm = 5000;
+int tempo_verd = 5000;
+int tempo_amar = 3000;
+
+
+void setup(){
+  pinMode(led_vermelho , OUTPUT);
+  pinMode(led_amarelo , OUTPUT);
+  pinMode(led_verde , OUTPUT);
+  pinMode(botao, INPUT);
+  
+  	digitalWrite (led_amarelo, HIGH);
+	delay (tempo_setup);
+  	digitalWrite (led_amarelo, LOW);
+	delay (tempo_setup);
+  	digitalWrite (led_amarelo, HIGH);
+	delay (tempo_setup);
+  	digitalWrite (led_amarelo, LOW);
+	delay (tempo_setup);
+  	digitalWrite (led_amarelo, HIGH);
+	delay (tempo_setup);
+    digitalWrite (led_amarelo, LOW);
+    delay (tempo_setup);
+}
+
+void loop(){
+  
+  if 
+    (digitalRead(botao) == HIGH){
+    digitalWrite (led_vermelho, HIGH);
+    digitalWrite (led_verde, HIGH);
+    digitalWrite (led_amarelo, HIGH);
+  }
+  else{
+    digitalWrite (led_vermelho, LOW);
+    digitalWrite (led_verde, LOW);
+    digitalWrite (led_amarelo, LOW);
+  }
+  
+    digitalWrite (led_vermelho, HIGH);
+	delay (tempo_verm);
+    digitalWrite (led_vermelho, LOW); 
+  
+    digitalWrite (led_verde, HIGH);
+	delay (tempo_verd);
+    digitalWrite (led_verde, LOW); 
+    
+    digitalWrite (led_amarelo, HIGH);
+	delay (tempo_amar);
+    digitalWrite (led_amarelo, LOW); 
+  
+    
+}
